@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lookDirScript : MonoBehaviour
+public class LookDirScript : MonoBehaviour
 {
     public Rigidbody2D rb;
 
