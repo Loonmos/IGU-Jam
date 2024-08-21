@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class soundshooting : MonoBehaviour
+public class SoundShooting : MonoBehaviour
 {
     public int soundSpeed = 300;
     public Rigidbody2D rb;
@@ -14,7 +14,6 @@ public class soundshooting : MonoBehaviour
     private Vector2 lookDir;
     public Transform shootingPnt;
     public float waveDestroyTime = 2;
-
 
 
     void Update()

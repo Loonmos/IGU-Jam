@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
     public enum State {Sound, Move, Jump, Fight, End}
     public State state = State.Sound;
 
-    private float cooldown;
+    private float cooldown = 0;
     public float changeTime;
     
     void Start()
@@ -25,6 +25,12 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         CheckState();
+
+        if (state != State.End)
+        {
+            cooldown += Time.deltaTime;
+        }
+        Debug.Log(cooldown);
     }
 
     private void CheckState()
@@ -44,11 +50,9 @@ public class TutorialManager : MonoBehaviour
         tutScreen.SetActive(true);
         tutText.SetText("Use the Left Mouse Button to make a sound in the direction of your mouse");
 
-        cooldown = 0;
-        cooldown += Time.deltaTime;
-        
         if (cooldown >= changeTime)
         {
+            cooldown = 0;
             state = State.Move;
         }
     }
@@ -57,9 +61,6 @@ public class TutorialManager : MonoBehaviour
     {
         tutScreen.SetActive(true);
         tutText.SetText("Use 'A' and 'D' to move");
-
-        cooldown = 0;
-        cooldown += Time.deltaTime;
 
         if (cooldown >= changeTime)
         {
@@ -72,9 +73,6 @@ public class TutorialManager : MonoBehaviour
         tutScreen.SetActive(true);
         tutText.SetText("Use 'W' to jump");
 
-        cooldown = 0;
-        cooldown += Time.deltaTime;
-
         if (cooldown >= changeTime)
         {
             state = State.End;
@@ -84,10 +82,7 @@ public class TutorialManager : MonoBehaviour
     private void Fight()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Fight");
-
-        cooldown = 0;
-        cooldown += Time.deltaTime;
+        tutText.SetText("Use (insert button) to attack using your pickaxe");
 
         if (cooldown >= changeTime)
         {
@@ -98,5 +93,6 @@ public class TutorialManager : MonoBehaviour
     private void End()
     {
         tutScreen.SetActive(false);
+        cooldown = 0;
     }
 }
