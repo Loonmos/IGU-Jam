@@ -7,6 +7,7 @@ public class soundshooting : MonoBehaviour
     public int soundSpeed;
     public Rigidbody2D rb;
     private GameObject wave;
+
     public GameObject soundWave;
     public float cooldown = 3;
     private Vector2 lookDir;
@@ -15,10 +16,10 @@ public class soundshooting : MonoBehaviour
 
 
 
+
     void Update()
     {   var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         lookDir = new Vector2(mousePos.x - rb.transform.position.x,mousePos.y - rb.transform.position.y);
-        lookAngl = Mathf.Atan2(lookDir.y,lookDir.x);
         if(Input.GetMouseButton(0) & cooldown >= 3)
         {
             cooldown = 0;
@@ -26,9 +27,8 @@ public class soundshooting : MonoBehaviour
             var rbs = wave.GetComponent<Rigidbody2D>();
             wave.transform.up = lookDir;
             rbs.AddForce(lookDir.normalized*300, ForceMode2D.Force);
-            Destroy(wave, 2);           
+            Destroy(wave, 2);          
         }
         cooldown += Time.deltaTime;
-        Debug.Log(lookDir);
     }
 }
