@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;  
     private bool grounded;
 
+    public AudioSource jumpSource;
+    public AudioSource landSource;
 
     void Update()
     {   
@@ -37,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         {   
             if(grounded)
             {
-                jumpForce= 30;   
+                jumpForce= 30;
             }
             else
             {
