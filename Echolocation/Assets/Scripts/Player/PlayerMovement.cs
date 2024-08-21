@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class PlayerMovement : MonoBehaviour
 {
     private int speed = 0;
-    public int baseSpeed;
+
     public int speedCoef = 17;
     public int jumpForce = 0;
     public Rigidbody2D rb;  
@@ -47,29 +47,20 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(speed * speedCoef * Time.fixedDeltaTime, rb.velocity.y);
-        
+        rb.velocity = new Vector2(speed * speedCoef, rb.velocity.y);       
         if(grounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
-    void OnCollisionEnter2D()
+    void OnTriggerEnter2D()
     {
-        // if the player collides with the ground
-        // the blocks rn have like a ground tag
+
         grounded = true;
-
-        // if the player collides with the wall
-        // the blocks rn have a ground+wall tag
-
     }
-    void OnCollisionExit2D()
+    void OnTriggerExit2D()
     {
         grounded = false;
-
     }
-
-    // make it so the jumpcount resets when you hit the ground in order to be able to jump in the air if you fall
 
 }
