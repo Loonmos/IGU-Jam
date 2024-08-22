@@ -88,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = true;
         anim.SetBool("Jumping", false);
         landSource.Play();
+        walkSounds.walkLight.intensity = 1;
     }
     void OnTriggerExit2D(Collider2D col)
     {
