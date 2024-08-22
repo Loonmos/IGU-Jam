@@ -6,14 +6,9 @@ public class WalkSounds : MonoBehaviour
 {
     public AudioSource[] audioSources;
     
-    bool playing = false;
+    public bool playing = false;
     float timer = 0;
     float delay = 0;
-
-    void Start()
-    {
-        Play(0.5f);
-    }
 
     public void Play(float _delay)
     {
@@ -24,6 +19,7 @@ public class WalkSounds : MonoBehaviour
     public void Stop()
     {
         playing = false;
+        timer = 0;
     }
 
 

@@ -9,7 +9,7 @@ public class soundshooting : MonoBehaviour
     private GameObject wave;
 
     public GameObject soundWave;
-    private float cooldown = 0;
+    private float cooldown = 3;
     public float cooldownTime = 3;
     private Vector2 lookDir;
     public Transform shootingPnt;

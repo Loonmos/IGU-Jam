@@ -5004,7 +5004,7 @@ GameObject:
   - component: {fileID: 423163721}
   m_Layer: 0
   m_Name: Jump
-  m_TagString: Untagged
+  m_TagString: Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5096,7 +5096,7 @@ GameObject:
   - component: {fileID: 609328711}
   m_Layer: 0
   m_Name: Fight
-  m_TagString: Untagged
+  m_TagString: Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

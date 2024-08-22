@@ -30,7 +30,6 @@ public class TutorialManager : MonoBehaviour
         {
             cooldown += Time.deltaTime;
         }
-        Debug.Log(cooldown);
     }
 
     private void CheckState()

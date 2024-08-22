@@ -9,7 +9,8 @@ public class Wave : MonoBehaviour
     AudioSource source;
     public float outerRadius = 6;
     public float innerRadius = 2;
-    public float factor = 0.6f;
+    public float lightFactor = 0.6f;
+    public float soundFactor = 0.8f;
 
     private void Awake()
     {
@@ -19,12 +20,12 @@ public class Wave : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         source.PlayOneShot(source.clip);
-        source.volume *= 0.5f;
+        source.volume *= soundFactor;
 
         var light = Instantiate(bounceLightPrefab, transform.position, Quaternion.identity).GetComponent<Light2D>();
         light.pointLightOuterRadius = outerRadius;
         light.pointLightInnerRadius = innerRadius;
-        outerRadius *= factor;
-        innerRadius *= factor;
+        outerRadius *= lightFactor;
+        innerRadius *= lightFactor;
     }
 }
