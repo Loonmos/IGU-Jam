@@ -15,6 +15,7 @@ public class Wave : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        SpawnLight();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,6 +23,11 @@ public class Wave : MonoBehaviour
         source.PlayOneShot(source.clip);
         source.volume *= soundFactor;
 
+        SpawnLight();
+    }
+
+    void SpawnLight()
+    {
         var light = Instantiate(bounceLightPrefab, transform.position, Quaternion.identity).GetComponent<Light2D>();
         light.pointLightOuterRadius = outerRadius;
         light.pointLightInnerRadius = innerRadius;

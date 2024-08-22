@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class WalkSounds : MonoBehaviour
 {
     public AudioSource[] audioSources;
-    
+    public Light2D walkLight;
+    public float fadeSpeed;
+
     public bool playing = false;
     float timer = 0;
     float delay = 0;
@@ -25,12 +28,14 @@ public class WalkSounds : MonoBehaviour
 
     void Update()
     {
+        walkLight.intensity -= fadeSpeed * Time.deltaTime;
         if(playing)
         {
             timer += Time.deltaTime;
             if(timer > delay) 
             {
                 audioSources[Random.Range(0, audioSources.Length)].Play();
+                walkLight.intensity = 0.6f;
                 timer = 0;
             }
         }
