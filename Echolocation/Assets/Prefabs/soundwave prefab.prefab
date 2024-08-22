@@ -15,10 +15,6 @@ GameObject:
   - component: {fileID: 5774504702070099170}
   - component: {fileID: -1065475043374336469}
   - component: {fileID: 3541952027176941710}
-  - component: {fileID: -1065475043374336469}
-  - component: {fileID: 3541952027176941710}
-  - component: {fileID: -1065475043374336469}
-  - component: {fileID: 3541952027176941710}
   m_Layer: 0
   m_Name: soundwave prefab
   m_TagString: Untagged
@@ -278,9 +274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceLightPrefab: {fileID: 4635826603410007338, guid: b6dadced85a4c5d459396f82196e9a29, type: 3}
-  outerRadius: 6
+  outerRadius: 5
   innerRadius: 2
-  factor: 0.75
+  factor: 0.8
 --- !u!1 &3516937941889269858
 GameObject:
   m_ObjectHideFlags: 0
