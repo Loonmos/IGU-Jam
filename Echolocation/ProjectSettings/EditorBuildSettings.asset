@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KimLevelTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 46a3ed817ecf00940b29d3b42dc775ca
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: ac33f55b523b63446b982e6570938b9a
+  - enabled: 1
+    path: Assets/Scenes/TutCutscene.unity
+    guid: 4407cf619834540439ed410d82792bdc
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: c8f907fc8c29ff944872c211c09bd706
   m_configObjects: {}

@@ -15,7 +15,6 @@ public class SoundShooting : MonoBehaviour
     public float waveDestroyTime = 2;
 
 
-
     void Update()
     {   
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // take mouse pos make it into coords
