@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource jumpSource;
     public AudioSource landSource;
 
+    public Animator anim;
+
     void Update()
     {   
         speed = 0;
@@ -27,15 +29,20 @@ public class PlayerMovement : MonoBehaviour
         {  
             speed = -1;
             transform.localScale = new Vector3(1,1,1);
+            anim.SetBool("Running", true);
         }
-        
-        if(Input.GetKey("d"))
+        else if(Input.GetKey("d"))
         {
             speed = 1;
             transform.localScale = new Vector3(-1,1,1);
+            anim.SetBool("Running", true);
         }
-        
-        if(Input.GetKey("w"))
+        else
+        {
+            anim.SetBool("Running", false);
+        }
+
+        if (Input.GetKey("w"))
         {   
             if(grounded)
             {
@@ -57,12 +64,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D()
     {
-
         grounded = true;
+        anim.SetBool("Jumping", false);
     }
     void OnTriggerExit2D()
     {
         grounded = false;
+        anim.SetBool("Jumping", true);
     }
 
 }
