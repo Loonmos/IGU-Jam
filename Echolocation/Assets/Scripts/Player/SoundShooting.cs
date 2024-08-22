@@ -13,8 +13,15 @@ public class soundshooting : MonoBehaviour
     public float cooldownTime = 3;
     private Vector2 lookDir;
     public Transform shootingPnt;
-    public float waveDestroyTime = 2;
+    public float waveDestroyTime = 4;
+    public WhistleSounds whistleSounds;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 
     void Update()
@@ -28,7 +35,18 @@ public class soundshooting : MonoBehaviour
             GameObject wave = Instantiate(soundWave, shootingPnt);
             var rbs = wave.GetComponent<Rigidbody2D>();
             wave.transform.up = lookDir;
+<<<<<<< Updated upstream
             rbs.AddForce(lookDir.normalized * soundSpeed * Time.deltaTime, ForceMode2D.Force);
+=======
+            rbs.AddForce(lookDir.normalized * soundSpeed, ForceMode2D.Impulse);
+            whistleSounds.Play(wave.GetComponent<AudioSource>());
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             Destroy(wave, waveDestroyTime);          
         }
         

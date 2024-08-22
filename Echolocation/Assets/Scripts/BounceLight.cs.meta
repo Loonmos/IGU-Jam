@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Echolocation/Assets/Scripts/BounceSound.cs.meta
+guid: 7be534596418d0741836fedd21b6387a
+=======
+<<<<<<<< Updated upstream:Echolocation/Assets/Scripts/WhistleSounds.cs.meta
+guid: 3ae4ddce1edbbbd4a8bb35ae1d58a4cb
+>>>>>>> Stashed changes
+========
+guid: 78891bbfde21b0149a9ced4d109a8957
+>>>>>>>> Stashed changes:Echolocation/Assets/Scripts/BounceLight.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
