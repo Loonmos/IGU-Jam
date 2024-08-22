@@ -13,21 +13,12 @@ GameObject:
   - component: {fileID: 7498996807880533226}
   - component: {fileID: 5694154687278922586}
   - component: {fileID: 5774504702070099170}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
   - component: {fileID: -1065475043374336469}
   - component: {fileID: 3541952027176941710}
->>>>>>> Stashed changes
-=======
   - component: {fileID: -1065475043374336469}
   - component: {fileID: 3541952027176941710}
->>>>>>> Stashed changes
-=======
   - component: {fileID: -1065475043374336469}
   - component: {fileID: 3541952027176941710}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: soundwave prefab
   m_TagString: Untagged
@@ -178,14 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7498996807880533226}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!82 &-1065475043374336469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -380,10 +363,3 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

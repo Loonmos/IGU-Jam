@@ -197,7 +197,7 @@ Animator:
   m_GameObject: {fileID: 6872179689659727894}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d5f0f2b6b0c81044b8d31400acf2465f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b12dd1b14683a349a57635f9c30df89, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -344,12 +344,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dbd842a3792a64ea1622d0fb781ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 0
   speedCoef: 17
   jumpForce: 0
   rb: {fileID: 7011430329011922914}
   jumpSource: {fileID: 0}
   landSource: {fileID: 0}
+  anim: {fileID: 1177711922534740717}
 --- !u!114 &8372394741480032272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,9 +368,7 @@ MonoBehaviour:
   cooldownTime: 3
   shootingPnt: {fileID: 9036618202966407109}
   waveDestroyTime: 2
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+  whistleSounds: {fileID: 0}
 --- !u!1 &8368042820931199768
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,12 +400,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6868697015660220417}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
-  whistleSounds: {fileID: 0}
->>>>>>> Stashed changes
-=======
-  whistleSounds: {fileID: 0}
->>>>>>> Stashed changes
-=======
-  whistleSounds: {fileID: 0}
->>>>>>> Stashed changes

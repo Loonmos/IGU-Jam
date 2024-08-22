@@ -92,7 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4635826603410007338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78891bbfde21b0149a9ced4d109a8957, type: 3}
+  m_Script: {fileID: 11500000, guid: 871e11a9b2125f94faeb946e943534ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   light2d: {fileID: 1509738214009367337}
