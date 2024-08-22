@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e5b3222c9f28514898b40d65a6e37b8
+guid: e49d49fc5b85edf4dbc9289f2cadcb85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_0
+      name: dark_player_pickaxe_eyes 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1db80ae2ba9a0148839bdff7a035b50
-      internalID: -1707275153
+      spriteID: bddd1f134568ff440ba3028fbb8d6718
+      internalID: -1254503864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_1
+      name: dark_player_pickaxe_eyes 1_1
       rect:
         serializedVersion: 2
         x: 48
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 682200896061df64c94502c6f104ccfc
-      internalID: 1349242939
+      spriteID: 4741738e0d196594abf99e893e3136b1
+      internalID: 1756153957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_2
+      name: dark_player_pickaxe_eyes 1_2
       rect:
         serializedVersion: 2
         x: 96
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f219553ea6049d04facfaa2c0acc56ee
-      internalID: -391771214
+      spriteID: cc21398bc2f532f44b1ab70beb2d33a2
+      internalID: -1862856822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_3
+      name: dark_player_pickaxe_eyes 1_3
       rect:
         serializedVersion: 2
         x: 144
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7255611b9cb19642a43889093f50bd3
-      internalID: -481313530
+      spriteID: 831282ef6e67e2a4d9b6fa8d913d9484
+      internalID: -1814249242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_4
+      name: dark_player_pickaxe_eyes 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a00990ac408e54d43abf718677bff747
-      internalID: 265481598
+      spriteID: 4d41ad9013367d04c87ced594c4e3a1d
+      internalID: -1724063203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_5
+      name: dark_player_pickaxe_eyes 1_5
       rect:
         serializedVersion: 2
         x: 48
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afac4e4f786e5754293241cbb1c9c168
-      internalID: -1554844964
+      spriteID: eb3f943b47719b24c809acb0132b2b73
+      internalID: 2103949279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_6
+      name: dark_player_pickaxe_eyes 1_6
       rect:
         serializedVersion: 2
         x: 96
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12bd1d7123704e54085db6d4b434801a
-      internalID: -1284741956
+      spriteID: be382c983ef8098459ca3f61a370dc1c
+      internalID: -1360908721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_7
+      name: dark_player_pickaxe_eyes 1_7
       rect:
         serializedVersion: 2
         x: 144
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980b4df6520509d4f9024d9661197a5a
-      internalID: -1443959595
+      spriteID: f7f26a9de68168e47bfb0cb72d8a74b4
+      internalID: 1356541092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_8
+      name: dark_player_pickaxe_eyes 1_8
       rect:
         serializedVersion: 2
         x: 192
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 076b417eb71bcbf4bb70c012ff4253e6
-      internalID: -297228773
+      spriteID: f918e71570d33724f803bbbe12e0e86a
+      internalID: 353869358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_9
+      name: dark_player_pickaxe_eyes 1_9
       rect:
         serializedVersion: 2
         x: 240
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3bacbc9846c8ad4c8de3d68434cf544
-      internalID: -1730304849
+      spriteID: 13f6d0652a6e1134ab770d9f2d31035b
+      internalID: 1385109127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_10
+      name: dark_player_pickaxe_eyes 1_10
       rect:
         serializedVersion: 2
         x: 288
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8618ef5e2178e1c4d8e4cdd719487983
-      internalID: 1395737218
+      spriteID: d5b8ed8802cf4904a95cb9d86069f006
+      internalID: -1199387307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_11
+      name: dark_player_pickaxe_eyes 1_11
       rect:
         serializedVersion: 2
         x: 336
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5637d516a9ab2a44488fbc51b01cf683
-      internalID: -1463546828
+      spriteID: 9e5d6f763a5f0b14cbb35c0f095276bb
+      internalID: -1902670262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_12
+      name: dark_player_pickaxe_eyes 1_12
       rect:
         serializedVersion: 2
         x: 48
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33851729f8e54204a880ff18782e3a15
-      internalID: 1854457613
+      spriteID: b3a59fdff76cca14893a18e779e92849
+      internalID: -76277457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_13
+      name: dark_player_pickaxe_eyes 1_13
       rect:
         serializedVersion: 2
         x: 96
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5062e0aa674c0a469711308f0fc9c09
-      internalID: 2069224237
+      spriteID: 550a356e69505e54897c1413e0a9daa4
+      internalID: 392769577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dark_player_pickaxe_eyes_14
+      name: dark_player_pickaxe_eyes 1_14
       rect:
         serializedVersion: 2
         x: 96
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcba64125dfbb514cb87f8a1832572a9
-      internalID: 1656446664
+      spriteID: d723b6cb8eafd8543a8141dca1bf84bd
+      internalID: -399910180
       vertices: []
       indices: 
       edges: []
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dark_player_pickaxe_eyes_0: -1707275153
-      dark_player_pickaxe_eyes_1: 1349242939
-      dark_player_pickaxe_eyes_10: 1395737218
-      dark_player_pickaxe_eyes_11: -1463546828
-      dark_player_pickaxe_eyes_12: 1854457613
-      dark_player_pickaxe_eyes_13: 2069224237
-      dark_player_pickaxe_eyes_14: 1656446664
-      dark_player_pickaxe_eyes_2: -391771214
-      dark_player_pickaxe_eyes_3: -481313530
-      dark_player_pickaxe_eyes_4: 265481598
-      dark_player_pickaxe_eyes_5: -1554844964
-      dark_player_pickaxe_eyes_6: -1284741956
-      dark_player_pickaxe_eyes_7: -1443959595
-      dark_player_pickaxe_eyes_8: -297228773
-      dark_player_pickaxe_eyes_9: -1730304849
+      dark_player_pickaxe_eyes 1_0: -1254503864
+      dark_player_pickaxe_eyes 1_1: 1756153957
+      dark_player_pickaxe_eyes 1_10: -1199387307
+      dark_player_pickaxe_eyes 1_11: -1902670262
+      dark_player_pickaxe_eyes 1_12: -76277457
+      dark_player_pickaxe_eyes 1_13: 392769577
+      dark_player_pickaxe_eyes 1_14: -399910180
+      dark_player_pickaxe_eyes 1_2: -1862856822
+      dark_player_pickaxe_eyes 1_3: -1814249242
+      dark_player_pickaxe_eyes 1_4: -1724063203
+      dark_player_pickaxe_eyes 1_5: 2103949279
+      dark_player_pickaxe_eyes 1_6: -1360908721
+      dark_player_pickaxe_eyes 1_7: 1356541092
+      dark_player_pickaxe_eyes 1_8: 353869358
+      dark_player_pickaxe_eyes 1_9: 1385109127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

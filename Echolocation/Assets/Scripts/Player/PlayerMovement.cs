@@ -24,9 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
     public WalkSounds walkSounds;
     public AudioSource landSource;
-    public SpriteRenderer sprite;
+    public SpriteRenderer bodySprite;
+    public SpriteRenderer eyesSprite;
     public LayerMask wallLayer;
-    public Animator anim;
+    public Animator bodyAnim;
+    public Animator eyesAnim;
     public float walkSoundDelay = 0.5f;
 
 
@@ -45,19 +47,27 @@ public class PlayerMovement : MonoBehaviour
             walkSounds.Stop();
         }
 
-        if(Input.GetKey("a"))
-        {  
+        if (Input.GetKey("a"))
+        {
             speed = -1;
-            sprite.flipX = false;
-            anim.SetBool("Running", true);
+            bodySprite.flipX = false;
+            eyesSprite.flipX = false;
+            bodyAnim.SetBool("Running", true);
+            eyesAnim.SetBool("Running", true);
         }
-        else if(Input.GetKey("d"))
+        else if (Input.GetKey("d"))
         {
             speed = 1;
-            sprite.flipX = true;
-            anim.SetBool("Running", true);
+            bodySprite.flipX = true;
+            eyesSprite.flipX = true;
+            bodyAnim.SetBool("Running", true);
+            eyesAnim.SetBool("Running", true);
         }
-        else anim.SetBool("Running", false);
+        else 
+        { 
+            bodyAnim.SetBool("Running", false);
+            eyesAnim.SetBool("Running", false);
+        }
 
         if (Input.GetKey("w"))
         {   
@@ -86,14 +96,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.tag == "Tutorial") return;
         grounded = true;
-        anim.SetBool("Jumping", false);
+        bodyAnim.SetBool("Jumping", false);
+        eyesAnim.SetBool("Jumping", false);
         landSource.Play();
     }
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "Tutorial") return;
         grounded = false;
-        anim.SetBool("Jumping", true);
+        bodyAnim.SetBool("Jumping", true);
+        eyesAnim.SetBool("Jumping", true);
         walkSounds.Stop();
     }
     private bool isWalledLeft()
