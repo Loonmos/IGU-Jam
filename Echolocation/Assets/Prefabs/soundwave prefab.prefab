@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7498996807880533226}
   - component: {fileID: 5694154687278922586}
   - component: {fileID: 5774504702070099170}
+  - component: {fileID: -6563441417305409518}
   m_Layer: 0
   m_Name: soundwave prefab
   m_TagString: Untagged
@@ -162,3 +163,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7498996807880533226}
+--- !u!114 &-6563441417305409518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3420125211987888500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16019a3c0e7f098409b6140f5027eb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 7498996807880533226}
+  lightPrefab: {fileID: 7791917508042536082, guid: 8c821181f5a90c04a9745ff55a8a1295, type: 3}
+  lightDestroyTime: 5
