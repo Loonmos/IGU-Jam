@@ -106,16 +106,26 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(speed * speedCoef, rb.velocity.y);       
     }
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         if (col.tag == "Tutorial") return;
-        grounded = true;
-        bodyAnim.SetBool("Jumping", false);
-        eyesAnim.SetBool("Jumping", false);
-        jump = false;
-        landSource.Play();
-        walkSounds.walkLight.intensity = 1;
+        if (!grounded && col.tag == "Ground")
+        {
+            Debug.Log("Enter");
+            grounded = true;
+            bodyAnim.SetBool("Jumping", false);
+            eyesAnim.SetBool("Jumping", false);
+            jump = false;
+            landSource.Play();
+            walkSounds.walkLight.intensity = 1;
+        }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "Tutorial") return;
