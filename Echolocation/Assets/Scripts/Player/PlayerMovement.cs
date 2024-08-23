@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;  
     private bool grounded = true;
 
-    private bool isWallSliding;
+
     private float wallSlidingSpeed = 2f;
     public Transform wallCheckLeft;
     public Transform wallCheckRight;
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
             eyesAnim.SetBool("Running", false);
         }
 
-        if (Input.GetKey("w"))
+        if (Input.GetKeyDown("w"))
         {   
             if(grounded)
             {
@@ -84,7 +84,6 @@ public class PlayerMovement : MonoBehaviour
         }
         isWalledLeft();
         isWalledRight();
-
         wallSlide();
         
     }
@@ -122,14 +121,14 @@ public class PlayerMovement : MonoBehaviour
         if(isWalledLeft() || isWalledRight())
         {   if(grounded == false && Input.GetKey("f"))
             {
-                isWallSliding = true;
+
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
                 Debug.Log("gsgs");
             }
         }
         else
         {
-            isWallSliding = false;
+
         }
     }
 

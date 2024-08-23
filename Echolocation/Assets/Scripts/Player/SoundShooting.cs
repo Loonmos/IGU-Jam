@@ -28,7 +28,6 @@ public class soundshooting : MonoBehaviour
             GameObject wave = Instantiate(soundWave, shootingPnt);
             var rbs = wave.GetComponent<Rigidbody2D>();
             wave.transform.up = lookDir;
-            rbs.AddForce(lookDir.normalized * soundSpeed * Time.deltaTime, ForceMode2D.Force);
             rbs.AddForce(lookDir.normalized * soundSpeed, ForceMode2D.Impulse);
             whistleSounds.Play(wave.GetComponent<AudioSource>());
             Destroy(wave, waveDestroyTime);          
