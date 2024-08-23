@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator eyesAnim;
     public float walkSoundDelay = 0.5f;
 
+    bool wallJump = false;
+    bool jump = false;
 
 
     void Update()
@@ -76,10 +78,23 @@ public class PlayerMovement : MonoBehaviour
                 jumpForce = jumpForceGround;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
-            if((isWalledLeft() || isWalledRight()) && Input.GetKey("f"))
+            else if(Input.GetMouseButton(1))
             {
                 jumpForce = jumpForceWall;
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    
+                if (isWalledLeft()) rb.velocity = Vector2.down * jumpForce;
+                if (isWalledRight()) rb.velocity = Vector2.up * jumpForce;
+
+                wallJump = true;
+            }
+        }
+
+        if(Input.GetKeyUp("w"))
+        {
+            if (jump)
+            {
+                jump = false;
+                rb.velocity = new Vector2(rb.velocity.x, 0);
             }
         }
         isWalledLeft();
@@ -97,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = true;
         bodyAnim.SetBool("Jumping", false);
         eyesAnim.SetBool("Jumping", false);
+        jump = false;
         landSource.Play();
         walkSounds.walkLight.intensity = 1;
     }
@@ -106,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = false;
         bodyAnim.SetBool("Jumping", true);
         eyesAnim.SetBool("Jumping", true);
+        jump = true;
         walkSounds.Stop();
     }
     private bool isWalledLeft()
@@ -118,8 +135,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void wallSlide()
     {
+        if (!isWalledLeft() && !isWalledRight() && wallJump) wallJump = false;
         if(isWalledLeft() || isWalledRight())
-        {   if(grounded == false && Input.GetKey("f"))
+        {   if(grounded == false && Input.GetMouseButton(1) && !wallJump)
             {
 
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
