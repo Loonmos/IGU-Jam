@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     public WalkSounds walkSounds;
     public AudioSource landSource;
+    public AudioSource slideSound;
     public SpriteRenderer bodySprite;
     public SpriteRenderer eyesSprite;
     public LayerMask wallLayer;
@@ -85,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
                 if (isWalledLeft()) rb.velocity = Vector2.up * jumpForce;
                 if (isWalledRight()) rb.velocity = Vector2.up * jumpForce;
 
+                slideSound.Stop();
                 wallJump = true;
             }
         }
@@ -118,12 +120,8 @@ public class PlayerMovement : MonoBehaviour
             jump = false;
             landSource.Play();
             walkSounds.walkLight.intensity = 1;
+            slideSound.Stop();
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -149,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
         if(isWalledLeft() || isWalledRight())
         {   if(grounded == false && Input.GetMouseButton(1) && !wallJump)
             {
-
+                if (!slideSound.isPlaying) slideSound.Play();
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
                 Debug.Log("gsgs");
             }
