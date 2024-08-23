@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             else if(Input.GetMouseButton(1))
             {
                 jumpForce = jumpForceWall;
-                    
+
                 if (isWalledLeft()) rb.velocity = Vector2.up * jumpForce;
                 if (isWalledRight()) rb.velocity = Vector2.up * jumpForce;
 
@@ -123,7 +123,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        bodyAnim.SetBool("WallSticking", false);
+        eyesAnim.SetBool("WallSticking", false);
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -152,6 +153,14 @@ public class PlayerMovement : MonoBehaviour
 
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
                 Debug.Log("gsgs");
+
+                bodyAnim.SetBool("WallSticking", true);
+                eyesAnim.SetBool("WallSticking", true);
+            }
+            else
+            {
+                bodyAnim.SetBool("WallSticking", false);
+                eyesAnim.SetBool("WallSticking", false);
             }
         }
         else
