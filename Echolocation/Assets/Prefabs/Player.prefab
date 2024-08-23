@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dbd842a3792a64ea1622d0fb781ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedCoef: 17
+  speedCoef: 13
   jumpForceGround: 30
   jumpForceWall: 30
   rb: {fileID: 7011430329011922914}

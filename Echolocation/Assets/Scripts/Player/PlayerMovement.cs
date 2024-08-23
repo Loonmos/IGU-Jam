@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 jumpForce = jumpForceWall;
                     
-                if (isWalledLeft()) rb.velocity = Vector2.down * jumpForce;
+                if (isWalledLeft()) rb.velocity = Vector2.up * jumpForce;
                 if (isWalledRight()) rb.velocity = Vector2.up * jumpForce;
 
                 wallJump = true;
