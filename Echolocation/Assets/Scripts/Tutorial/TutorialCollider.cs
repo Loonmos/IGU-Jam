@@ -17,9 +17,9 @@ public class TutorialCollider : MonoBehaviour
                 Jump();
             }
 
-            if (whatState == "Fight")
+            if (whatState == "Wall")
             {
-                Fight();
+                Wall();
             }
         }
     }
@@ -30,9 +30,9 @@ public class TutorialCollider : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Fight()
+    public void Wall()
     {
-        tutMan.state = TutorialManager.State.Fight;
+        tutMan.state = TutorialManager.State.Wall;
         Destroy(gameObject);
     }
 }

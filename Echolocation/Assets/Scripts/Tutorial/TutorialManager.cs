@@ -10,7 +10,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject tutScreen;
     public TextMeshProUGUI tutText;
 
-    public enum State {Sound, Move, Jump, Fight, End}
+    public enum State {Sound, Move, Jump, Wall, End}
     public State state = State.Sound;
 
     private float cooldown = 0;
@@ -39,7 +39,7 @@ public class TutorialManager : MonoBehaviour
             case State.Sound: Sound(); break;
             case State.Move: Move(); break;
             case State.Jump: Jump(); break;
-            case State.Fight: Fight(); break;
+            case State.Wall: Wall(); break;
             case State.End: End(); break;
         }
     }
@@ -78,10 +78,10 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    private void Fight()
+    private void Wall()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Use (insert button) to attack using your pickaxe");
+        tutText.SetText("Use 'F' to hold onto walls");
 
         if (cooldown >= changeTime)
         {
