@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool wallJump = false;
     bool jump = false;
+    bool wallStick = false;
 
 
     void Update()
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
                 jumpForce = jumpForceGround;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
-            else if(Input.GetMouseButton(1))
+            else if(wallStick)
             {
                 jumpForce = jumpForceWall;
 
@@ -150,25 +151,40 @@ public class PlayerMovement : MonoBehaviour
     private void wallSlide()
     {
         if (!isWalledLeft() && !isWalledRight() && wallJump) wallJump = false;
-        if(isWalledLeft() || isWalledRight())
-        {   if(grounded == false && Input.GetMouseButton(1) && !wallJump)
+        if(isWalledLeft())
+        {   if(grounded == false && Input.GetKey("a") && !wallJump)
             {
                 if (!slideSound.isPlaying) slideSound.Play();
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
                 Debug.Log("gsgs");
-
                 bodyAnim.SetBool("WallSticking", true);
                 eyesAnim.SetBool("WallSticking", true);
+                wallStick = true;
             }
             else
             {
                 bodyAnim.SetBool("WallSticking", false);
                 eyesAnim.SetBool("WallSticking", false);
+                wallStick = false;
             }
         }
-        else
+        if (isWalledRight())
         {
-
+            if (grounded == false && Input.GetKey("d") && !wallJump)
+            {
+                if (!slideSound.isPlaying) slideSound.Play();
+                rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+                Debug.Log("gsgs");
+                bodyAnim.SetBool("WallSticking", true);
+                eyesAnim.SetBool("WallSticking", true);
+                wallStick = true;
+            }
+            else
+            {
+                bodyAnim.SetBool("WallSticking", false);
+                eyesAnim.SetBool("WallSticking", false);
+                wallStick = false;
+            }
         }
     }
 
