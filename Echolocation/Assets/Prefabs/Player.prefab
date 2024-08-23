@@ -1668,7 +1668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e85d3cf2a05e9a45a6521891d664220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundSpeed: 30
+  soundSpeed: 25
   rb: {fileID: 7011430329011922914}
   soundWave: {fileID: 3420125211987888500, guid: 2e3525e2f696b52488d67ec22f0523d7, type: 3}
   cooldownTime: 2
