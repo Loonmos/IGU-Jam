@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             eyesAnim.SetBool("Running", false);
         }
 
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("space"))
         {   
             if(grounded)
             {
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyUp("w"))
+        if(Input.GetKeyUp("space"))
         {
             if (jump)
             {
