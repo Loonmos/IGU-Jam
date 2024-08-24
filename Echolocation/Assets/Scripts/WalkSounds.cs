@@ -28,7 +28,7 @@ public class WalkSounds : MonoBehaviour
 
     void Update()
     {
-        walkLight.intensity -= fadeSpeed * Time.deltaTime;
+        walkLight.intensity = Mathf.Clamp(walkLight.intensity - fadeSpeed * Time.deltaTime, 0, 1);
         if(playing)
         {
             timer += Time.deltaTime;
