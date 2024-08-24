@@ -127,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Enter");
             grounded = true;
+            rb.gravityScale = 0;
             bodyAnim.SetBool("Jumping", false);
             bodyAnimLight.SetBool("Jumping", false);
             eyesAnim.SetBool("Jumping", false);
@@ -148,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.tag == "Tutorial") return;
         grounded = false;
+        rb.gravityScale = 10;
         bodyAnim.SetBool("Jumping", true);
         bodyAnimLight.SetBool("Jumping", true);
         eyesAnim.SetBool("Jumping", true);
