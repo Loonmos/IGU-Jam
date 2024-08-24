@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
@@ -25,10 +26,15 @@ public class PlayerMovement : MonoBehaviour
     public WalkSounds walkSounds;
     public AudioSource landSource;
     public AudioSource slideSound;
+    public Light2D slideLightLeft;
+    public Light2D slideLightRight;
+    public float slideFadeSpeed;
     public SpriteRenderer bodySprite;
+    public SpriteRenderer bodySpriteLight;
     public SpriteRenderer eyesSprite;
     public LayerMask wallLayer;
     public Animator bodyAnim;
+    public Animator bodyAnimLight;
     public Animator eyesAnim;
     public float walkSoundDelay = 0.5f;
 
@@ -54,22 +60,27 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("a"))
         {
             speed = -1;
+            bodySpriteLight.flipX = false;
             bodySprite.flipX = false;
             eyesSprite.flipX = false;
             bodyAnim.SetBool("Running", true);
+            bodyAnimLight.SetBool("Running", true);
             eyesAnim.SetBool("Running", true);
         }
         else if (Input.GetKey("d"))
         {
             speed = 1;
             bodySprite.flipX = true;
+            bodySpriteLight.flipX = true;
             eyesSprite.flipX = true;
             bodyAnim.SetBool("Running", true);
+            bodyAnimLight.SetBool("Running", true);
             eyesAnim.SetBool("Running", true);
         }
         else 
         { 
             bodyAnim.SetBool("Running", false);
+            bodyAnimLight.SetBool("Running", false);
             eyesAnim.SetBool("Running", false);
         }
 
@@ -116,7 +127,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Enter");
             grounded = true;
+            rb.gravityScale = 0;
             bodyAnim.SetBool("Jumping", false);
+            bodyAnimLight.SetBool("Jumping", false);
             eyesAnim.SetBool("Jumping", false);
             jump = false;
             landSource.Play();
@@ -128,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bodyAnim.SetBool("WallSticking", false);
+        bodyAnimLight.SetBool("WallSticking", false);
         eyesAnim.SetBool("WallSticking", false);
     }
 
@@ -135,7 +149,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.tag == "Tutorial") return;
         grounded = false;
+        rb.gravityScale = 10;
         bodyAnim.SetBool("Jumping", true);
+        bodyAnimLight.SetBool("Jumping", true);
         eyesAnim.SetBool("Jumping", true);
         jump = true;
         walkSounds.Stop();
@@ -150,6 +166,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void wallSlide()
     {
+        slideLightLeft.intensity = Mathf.Clamp(slideLightLeft.intensity - slideFadeSpeed * Time.deltaTime, 0, 1);
+        slideLightRight.intensity = Mathf.Clamp(slideLightRight.intensity - slideFadeSpeed * Time.deltaTime, 0, 1);
         if (!isWalledLeft() && !isWalledRight() && wallJump) wallJump = false;
         if(isWalledLeft())
         {   if(grounded == false && Input.GetKey("a") && !wallJump)
@@ -158,12 +176,15 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
                 Debug.Log("gsgs");
                 bodyAnim.SetBool("WallSticking", true);
+                bodyAnimLight.SetBool("WallSticking", true);
                 eyesAnim.SetBool("WallSticking", true);
                 wallStick = true;
+                slideLightLeft.intensity = 1;
             }
             else
             {
                 bodyAnim.SetBool("WallSticking", false);
+                bodyAnimLight.SetBool("WallSticking", false);
                 eyesAnim.SetBool("WallSticking", false);
                 wallStick = false;
             }
@@ -176,12 +197,15 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
                 Debug.Log("gsgs");
                 bodyAnim.SetBool("WallSticking", true);
+                bodyAnimLight.SetBool("WallSticking", true);
                 eyesAnim.SetBool("WallSticking", true);
                 wallStick = true;
+                slideLightRight.intensity = 1;
             }
             else
             {
                 bodyAnim.SetBool("WallSticking", false);
+                bodyAnimLight.SetBool("WallSticking", false);
                 eyesAnim.SetBool("WallSticking", false);
                 wallStick = false;
             }

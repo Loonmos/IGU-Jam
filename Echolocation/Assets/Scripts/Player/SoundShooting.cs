@@ -15,7 +15,7 @@ public class soundshooting : MonoBehaviour
     public Transform shootingPnt;
     public float waveDestroyTime = 4;
     public WhistleSounds whistleSounds;
-
+    public SpriteRenderer eyes;
 
     void Update()
     {   
@@ -34,5 +34,6 @@ public class soundshooting : MonoBehaviour
         }
         
         cooldown += Time.deltaTime;
+        eyes.color = new Color(1,1,1, Mathf.Lerp(0,1,cooldown/cooldownTime));
     }
 }
