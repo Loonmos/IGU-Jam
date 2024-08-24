@@ -1832,8 +1832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedCoef: 13
-  jumpForceGround: 30
-  jumpForceWall: 30
+  jumpForceGround: 28
+  jumpForceWall: 28
   rb: {fileID: 7011430329011922914}
   wallCheckLeft: {fileID: 3898238626164256764}
   wallCheckRight: {fileID: 6392478479741363307}

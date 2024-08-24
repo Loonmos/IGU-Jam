@@ -4180,7 +4180,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 497
-        y: 64
+        y: 71
         width: 16
         height: 16
       alignment: 0
@@ -4201,7 +4201,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 513
-        y: 64
+        y: 71
         width: 16
         height: 16
       alignment: 0
@@ -4221,8 +4221,8 @@ TextureImporter:
       name: moss_195
       rect:
         serializedVersion: 2
-        x: 529
-        y: 64
+        x: 497
+        y: 55
         width: 16
         height: 16
       alignment: 0
@@ -4243,7 +4243,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 560
-        y: 64
+        y: 71
         width: 16
         height: 16
       alignment: 0
@@ -4264,7 +4264,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 576
-        y: 64
+        y: 71
         width: 16
         height: 16
       alignment: 0
@@ -4994,6 +4994,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: moss_232
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 55
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f54a5e4a74b2b498fcb2df637eb1cb
+      internalID: 1171453676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moss_233
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 55
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64868dcfe7446f49bdeaa1c41efca16
+      internalID: 1415177924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moss_234
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 55
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac1c757803ed9f4492f0e591c6ecbbf
+      internalID: 941999998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -5155,6 +5218,8 @@ TextureImporter:
       moss_230: -1737049366
       moss_231: -293785096
       moss_232: 1171453676
+      moss_233: 1415177924
+      moss_234: 941999998
       moss_24: 1381555384
       moss_25: 734332794
       moss_26: -543703816

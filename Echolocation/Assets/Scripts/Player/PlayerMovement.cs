@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 jump = false;
                 rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.gravityScale = 10;
             }
         }
         isWalledLeft();
