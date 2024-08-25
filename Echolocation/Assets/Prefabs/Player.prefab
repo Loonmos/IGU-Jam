@@ -697,7 +697,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 2098764783, guid: a2e5c90577617e345bd474612bb192f3, type: 3}
+  m_Sprite: {fileID: -704144562, guid: ec95741b96fa53b4f97a608ccd1ad83f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1832,8 +1832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedCoef: 13
-  jumpForceGround: 30
-  jumpForceWall: 30
+  jumpForceGround: 28
+  jumpForceWall: 28
   rb: {fileID: 7011430329011922914}
   wallCheckLeft: {fileID: 3898238626164256764}
   wallCheckRight: {fileID: 6392478479741363307}

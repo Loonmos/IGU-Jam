@@ -70,7 +70,7 @@ public class TutorialManager : MonoBehaviour
     private void Jump()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Use 'W' to jump");
+        tutText.SetText("Use 'Spacebar' to jump");
 
         if (cooldown >= changeTime)
         {
@@ -81,7 +81,7 @@ public class TutorialManager : MonoBehaviour
     private void Wall()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Use 'F' to hold onto walls");
+        tutText.SetText("Use 'A' or 'D' whilst jumping in order to cling to the wall");
 
         if (cooldown >= changeTime)
         {
