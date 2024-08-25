@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5774504702070099170}
   - component: {fileID: -1065475043374336469}
   - component: {fileID: 3541952027176941710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: soundwave prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8883135900710849704}
   - component: {fileID: 2885576613064769943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
