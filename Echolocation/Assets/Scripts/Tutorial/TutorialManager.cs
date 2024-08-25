@@ -47,7 +47,7 @@ public class TutorialManager : MonoBehaviour
     private void Sound()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Use the Left Mouse Button to make a sound in the direction of your mouse");
+        tutText.SetText("Press the 'Left Mouse Button' to make a sound in the direction of your mouse");
 
         if (cooldown >= changeTime)
         {
@@ -70,7 +70,7 @@ public class TutorialManager : MonoBehaviour
     private void Jump()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Use 'Spacebar' to jump");
+        tutText.SetText("Press 'Spacebar' to jump");
 
         if (cooldown >= changeTime)
         {
@@ -81,7 +81,7 @@ public class TutorialManager : MonoBehaviour
     private void Wall()
     {
         tutScreen.SetActive(true);
-        tutText.SetText("Use 'A' or 'D' whilst jumping in order to cling to the wall");
+        tutText.SetText("Hold 'A' or 'D' to cling to walls");
 
         if (cooldown >= changeTime)
         {
